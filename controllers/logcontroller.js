@@ -1,5 +1,7 @@
 const Express = require("express");
 const router = Express.Router();
+let validateJWT = require("../middleware/validate-jwt");
+const { LogModel } = require("../models");
 
 router.get("/", (req, res) => {
     res.send("LOG GET request success");
