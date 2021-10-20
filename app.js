@@ -4,6 +4,7 @@ require("dotenv").config();
 const dbConnection = require("./db");
 
 app.use(Express.json());
+app.use(require("../server/middleware/headers"));
 
 
 const controllers = require("./controllers");
